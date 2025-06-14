@@ -1,0 +1,17 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@product_url = https://localhost:7010
+
+### Get paginated products (page 1, 5 per page)
+GET {{product_url}}/products?pageIndex=1&pageSize=5
+Accept: application/json
+
+
+### Post products
+POST {{product_url}}/products
+Content-Type: application/json
+{
+  "product": {
+    "name": "iPhone 19",
+    "price": 999.99
+  }
+}
